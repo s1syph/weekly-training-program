@@ -79,7 +79,7 @@
     font-family: 'DM Sans', sans-serif;
     line-height: 1.1;
   }
-  .name-input:hover { border-bottom-color: var(--border); }
+  .title-static { font-size:36px; font-weight:600; letter-spacing:-.02em; color:var(--text-primary); font-family:"DM Sans",sans-serif; }
   .name-input:focus { border-bottom-color: var(--accent); }
 
   .title-suffix {
@@ -283,10 +283,10 @@
 
   <div class="header">
     <div class="header-eyebrow">Recomp Program · 7 days/week</div>
-    <div class="title-row">
-      <input class="name-input" id="nameInput" type="text" value="Jalal" maxlength="20" spellcheck="false" aria-label="Your name">
+    <h1 class="title-row" style="font-size:36px;font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:12px">
+      <span class="title-static">Jalal</span>
       <span class="title-suffix">'s Gym Plan</span>
-    </div>
+    </h1>
     <p>Push / Pull / Legs split with daily active recovery. Designed for body recomposition — build muscle and lose fat simultaneously.</p>
     <div class="stats-row">
       <div class="stat"><span class="stat-label">Current weight</span><div class="stat-input-wrap"><span class="stat-fixed">82.3</span><span class="stat-unit" style="font-size:15px;margin-left:2px">kg</span></div></div>
@@ -557,16 +557,6 @@
     document.querySelectorAll('.day-card').forEach((c, j) => c.classList.toggle('visible', i === j));
     document.querySelectorAll('.day-chip').forEach((c, j) => c.classList.toggle('active', i === j));
   }
-
-  const nameInput = document.getElementById('nameInput');
-  function syncName() {
-    const v = nameInput.value || 'You';
-    document.getElementById('footerName').textContent = v;
-    document.title = v + "'s Gym Plan";
-    nameInput.style.width = Math.max(50, nameInput.value.length * (window.innerWidth < 600 ? 16 : 22)) + 'px';
-  }
-  nameInput.addEventListener('input', syncName);
-  syncName();
 
   const squatData = {
     barbell: { name: 'Barbell squat',  note: 'Primary quad and glute driver — 3 sec descent' },
