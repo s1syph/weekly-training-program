@@ -109,21 +109,6 @@
   .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; }
 
   .stat-input-wrap { display: flex; align-items: baseline; gap: 4px; }
-
-  .stat-input {
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--text-primary);
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid var(--border);
-    outline: none;
-    width: 64px;
-    padding: 2px 4px;
-    transition: border-color .15s;
-    -moz-appearance: textfield;
-  }
   .stat-input::-webkit-outer-spin-button,
   .stat-input::-webkit-inner-spin-button { -webkit-appearance: none; }
   .stat-input:focus { border-bottom-color: var(--accent); }
@@ -304,20 +289,8 @@
     </div>
     <p>Push / Pull / Legs split with daily active recovery. Designed for body recomposition — build muscle and lose fat simultaneously.</p>
     <div class="stats-row">
-      <div class="stat">
-        <span class="stat-label">Current weight</span>
-        <div class="stat-input-wrap">
-          <input class="stat-input" id="weightInput" type="number" value="87" min="40" max="250" step="0.5" aria-label="Weight">
-          <span class="stat-unit">kg</span>
-        </div>
-      </div>
-      <div class="stat">
-        <span class="stat-label">Height</span>
-        <div class="stat-input-wrap">
-          <input class="stat-input" id="heightInput" type="number" value="178" min="140" max="230" step="1" aria-label="Height">
-          <span class="stat-unit">cm</span>
-        </div>
-      </div>
+      <div class="stat"><span class="stat-label">Current weight</span><div class="stat-input-wrap"><span class="stat-fixed">87</span><span class="stat-unit" style="font-size:15px;margin-left:2px">kg</span></div></div>
+      <div class="stat"><span class="stat-label">Height</span><div class="stat-input-wrap"><span class="stat-fixed">178</span><span class="stat-unit" style="font-size:15px;margin-left:2px">cm</span></div></div>
       <div class="stat">
         <span class="stat-label">Per session</span>
         <div class="stat-input-wrap"><span class="stat-fixed">45–70</span><span class="stat-unit" style="font-size:15px;margin-left:2px">min</span></div>
